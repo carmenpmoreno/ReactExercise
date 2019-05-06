@@ -1,0 +1,39 @@
+.main-App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  padding: 10px;
+  color: grey;
+  width: 80vw;
+  border: 1px solid grey;
+}
+
+.App-logo {
+  height: 30vmin;
+  display: inline;
+}
+
+.App-header {
+  display: flex;
+  color:grey;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
