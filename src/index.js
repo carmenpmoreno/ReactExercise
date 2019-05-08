@@ -2,23 +2,72 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import MediaCard from './MediaCard';
-import * as serviceWorker from './serviceWorker';
-import logo from './images/logo-ejercicio1.png'; //hay que importar la imagen desde mediacard para que la encuentre
+import './App.scss';
+
+class Item extends React.Component {
+  render() {
+    return (
+      <div className="item">
+        <h5 className="quantity">{ this.props.quantity }</h5>
+        <div>
+          <h5>{ this.props.name }</h5>
+          <h6 className="text-muted">{ this.props.description }</h6>
+        </div>
+        <div className="badge badge-info">{ this.props.category }</div>
+        <h5 className="price">{ this.props.price }€</h5>
+      </div>
+    );
+  }
+}
+
+// Bootstrap classes: badge, badge-info, text-muted
+
+class ItemList extends React.Component {
+  render() {
+    return (
+      <ul className="item-list">
+        <li>
+          <Item 
+            name="Cereales con chocolate" 
+            description="Cereales rellenos de chocolate" 
+            quantity={2}
+            category="Cereales" 
+            price={5} 
+          />
+        </li>
+        <li>
+          <Item 
+            name="Hamburguesa con queso" 
+            description="Hamburguesa rica y saludable" 
+            quantity={1}
+            category="Fast-food" 
+            price={15}
+          />
+        </li>
+        <li>
+          <Item 
+            name="Agua mineral" 
+            description="Agua de un charco del Himalaya" 
+            quantity={2}
+            category="Bebida" 
+            price={5}
+          />
+        </li>
+        <li>
+          <Item 
+            name="Pollo con patatas" 
+            description="Pollo y patatas" 
+            quantity={2}
+            category="Pollo" 
+            price={5} 
+          />
+        </li>
+      </ul>
+    );
+  }
+}
 
 ReactDOM.render(
-  <MediaCard
-    name="Carmen"
-    date="12/02/1990"
-    image="CCC"
-    description="fffff"
-    likes="GGG"
-    heart="ffff"
-  />,
+  <ItemList />,
   document.getElementById('root')
-); //lo que hay despues de MediaCard son los props que se pasan a MediaCard.js, en MediaCard.js no le pasamos ningun parámetro, react hace que estos parámetros se pasen solos
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+);
