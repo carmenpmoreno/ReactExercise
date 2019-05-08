@@ -7,11 +7,11 @@ class MediaCard extends React.Component {
   render() {
     // NOTA: para hacer las contantes, VAMOS DE PEQUEÑO A GRANDE. Tener en cuenta que primero ponemos las que engloban los trozos de código más pequeño y a continuación las de código que engloba el anterior.
     console.log(this.props);
-    const {
-      name,
-      date,
-      like
-    } = this.props; //es un destructuring, declaramos todas las variables juntas name, date, like que se inicializa con lo que esta en this.props
+    // const {
+    //   name,
+    //   date,
+    //   like
+    // } = this.props; //es un destructuring, declaramos todas las variables juntas name, date, like que se inicializa con lo que esta en this.props
     }
     const headerRoot = (
       <header className="App-header">
