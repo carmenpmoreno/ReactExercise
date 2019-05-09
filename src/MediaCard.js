@@ -17,9 +17,8 @@ class MediaCard extends React.Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="title-container">
-          <h1 className="App-title">Soy {name}</h1>
+          <h1 className="App-title">Soy {this.props.name}</h1>
            <h1 className="App-title">Soy {name}</h1> {/*//con el destructuring declarado arriba */}
-
           <p>{this.props.date}</p>
         </div>
       </header>
